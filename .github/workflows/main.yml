@@ -1,7 +1,8 @@
 name: demo worflow
  
 on:
-  push:
+  # push:
+  workflow_dispatch:  #to manually run the workflow
  
 jobs:
   build:
