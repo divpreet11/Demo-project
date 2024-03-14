@@ -8,15 +8,15 @@ jobs:
   run_python_program:
     runs_on: ubuntu_latest
 
-  steps:
-  - name: checkout repository
-    uses: actions/checkout@v2
+    steps:
+    - name: checkout repository
+      uses: actions/checkout@v2
 
-  - name: set up python
-    uses: actions/setup-python@v2
-    with:
-      python-version : '3x'
+    - name: set up python
+      uses: actions/setup-python@v2
+      with:
+        python-version : '3x'
 
-  - name: run python program
-    run: python index.py
+    - name: run python program
+      run: python index.py
   
