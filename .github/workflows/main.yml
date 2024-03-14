@@ -9,7 +9,7 @@ jobs:
     runs_on: ubuntu_latest
 
   steps:
-  - name: Checkout repository
+  - name: checkout repository
     uses: actions/checkout@v2
 
   - name: set up python
