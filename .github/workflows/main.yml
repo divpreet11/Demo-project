@@ -17,8 +17,8 @@ jobs:
     steps:
 
       - name: Print the first variable
-        run: echo $env.First_Variable
-        
+        run: echo ${{env.First_Variable}}
+
       - name: checkout repo content
         uses: actions/checkout@v4 # checkout the repository content
  
