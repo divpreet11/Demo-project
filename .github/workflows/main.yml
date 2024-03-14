@@ -17,4 +17,9 @@ jobs:
  
       - name: execute py script # run main.py
         run: python index.py
+
+      - name: Run a one-line script
+        run: echo Hello, World!
+
+
  
