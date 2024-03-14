@@ -6,6 +6,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    strategy:
+    matrix:
+      python-version: [3.12, 3.10, 3.9, 3.8]
+    
     steps:
       - name: checkout repo content
         uses: actions/checkout@v4 # checkout the repository content
@@ -13,7 +18,8 @@ jobs:
       - name: setup python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.12" # install the python version needed
+          # python-version: "3.12" # install the python version needed
+          python-version: ${{matrix.python-version}}
  
       - name: execute py script # run main.py
         run: python index.py
@@ -22,4 +28,7 @@ jobs:
         run: echo Hello, World!
 
 
- 
+      - name: Run a multi-line script
+        run: |
+        echo Add other actions to build
+        echo test, and deploy your project
