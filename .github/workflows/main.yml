@@ -12,7 +12,7 @@ jobs:
         python-version: [3.12, 3.9, 3.8]
 
     env:
-      num: 5
+      NUM: 5
     
     steps:
 
