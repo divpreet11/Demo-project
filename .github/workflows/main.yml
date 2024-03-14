@@ -1,22 +1,20 @@
-name: Python Workflow
-
+name: demo worflow
+ 
 on:
-  push: 
-    branches:
-      - main
+  push:
+ 
 jobs:
-  run_python_program:
-    runs_on: ubuntu_latest
-
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - name: checkout repository
-        uses: actions/checkout@v2
-
-      - name: set up python
-        uses: actions/setup-python@v2
+      - name: checkout repo content
+        uses: actions/checkout@v4 # checkout the repository content
+ 
+      - name: setup python
+        uses: actions/setup-python@v4
         with:
-          python-version : '3x'
-
-      - name: run python program
+          python-version: "3.12" # install the python version needed
+ 
+      - name: execute py script # run main.py
         run: python index.py
-  
+ 
