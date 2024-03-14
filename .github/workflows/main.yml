@@ -12,12 +12,12 @@ jobs:
         python-version: [3.12, 3.9, 3.8]
 
     env:
-      First_Variable: "true"
+      num: 5
     
     steps:
 
       - name: Print the first variable
-        run: echo ${{env.First_Variable}}
+        run: echo ${{env.num}}
 
       - name: checkout repo content
         uses: actions/checkout@v4 # checkout the repository content
