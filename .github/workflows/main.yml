@@ -17,7 +17,7 @@ jobs:
     steps:
 
       - name: Factorial of a number
-        run: ${{env.NUM}}
+        run: echo "Input: $env.NUM"
 
       - name: checkout repo content
         uses: actions/checkout@v4 # checkout the repository content
