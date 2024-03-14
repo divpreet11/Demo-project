@@ -16,8 +16,8 @@ jobs:
     
     steps:
 
-      - name: Print the first variable
-        run: echo ${{env.num}}
+      - name: Factorial
+        run: echo "Input: $env.NUM"
 
       - name: checkout repo content
         uses: actions/checkout@v4 # checkout the repository content
