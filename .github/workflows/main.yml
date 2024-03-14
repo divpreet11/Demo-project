@@ -1,34 +1,22 @@
-name: HTML Processing Workflow
+name: Python Workflow
 
 on:
-  push:
+  push: 
     branches:
-      - main  # Change this to your main branch
-
+      - main
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    
+  run_python_program:
+    runs_on: ubuntu_latest
+
     steps:
-    - name: Checkout code
+    - name: checkout repository
       uses: actions/checkout@v2
-      
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
+
+    - name: set up python
+      uses: actions/setup-python@v2
       with:
-        node-version: '14'
+        python-version : '3x'
 
-    - name: Install Dependencies
-      run: npm install  # Adjust this according to your project setup
-      
-    # Example: Lint HTML files
-    - name: Lint HTML files
-      run: npm run lint-html  # Adjust this according to your project setup
-
-    # Example: Minify HTML files
-    - name: Minify HTML files
-      run: npm run minify-html  # Adjust this according to your project setup
-      
-    # Example: Deploy HTML files
-    - name: Deploy to Hosting Service
-      run: npm run deploy  # Adjust this according to your project setup
+    - name: run python program
+      run: python index.py
+  
