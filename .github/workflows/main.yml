@@ -28,9 +28,8 @@ jobs:
         with:
           # python-version: "3.12" # install the python version needed
           python-version: ${{matrix.python-version}}
-      
-      #job dependencies
-      - needs: execute py script # run index.py
+ 
+      - name: execute py script # run index.py
         run: python index.py
 
       - name: Run a one-line script
